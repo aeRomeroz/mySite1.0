@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #89908c;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.bg-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-radio: 16/9) {
+  .bg-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-radio: 16/9) {
+  .bg-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.v-align-top {
+  vertical-align: top;
+}
+
+.v-align-middle {
+  vertical-align: middle;
+}
+
+.v-align-bottom {
+  vertical-align: bottom;
+}
+
+.transparent-wrapper {
+  position: relative;
+  width: 400px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: aliceblue;
+  border-radius: 10px;
+  padding: 50px 40px;
+  overflow: hidden;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+
+.wrapper.active .form-wrapper.login {
+  transform: translateY(-450px);
+}
+
+.input-group {
+  position: relative;
+  margin: 40px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgb(255, 255, 255, 0.1);
+  border-radius: 40px;
+}
+
+.input-group input::placeholder {
+  color: rgb(240, 248, 255, 0.7);
+}
+
+.input-group label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: rgba(240, 248, 255, 0.7);
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-group input {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: aliceblue;
+  padding: 0 15px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  height: 45px;
+  background: aliceblue;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .1);
+  cursor: pointer;
+  color: #333;
+  font-weight: 600;
+}
+
+
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 420px) {
+  .transparent-wrapper {
+    width: 260px
+  }
+  .form-wrapper{
+    width: auto;
+  }
+  .input-group{
+    width: auto;
+  }
+  .transparent-wrapper{
+    padding: 10px 10px 30px 10px;
+  }
+  .login-btn{
+    width: 70%;
+    justify-content: center;
+    display: block;
+    margin: auto;
+    }
+  .login-btn span{
+    text-align: center;
+  }
+
+}
